@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  color: blueviolet;
+}
+
+.gameWrapper {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1em;
+  padding: 1em 2em;
+}
+
+.hand {
+  width: 57px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+  pointer-events: none;
+}
+.player {
+  width: 100px;
+}
+
+.p1 {
+  transform: rotate(90deg);
+}
+.cpu {
+  transform: rotate(-90deg) rotateY(180deg);
+}
+
+.p1Active {
+  animation: userShake 0.5s infinite;
+}
+.cpuActive {
+  animation: cpuShake 0.5s infinite;
+}
+@keyframes userShake {
+  50% {
+    transform: rotate(68deg);
+  }
+}
+
+@keyframes cpuShake {
+  50% {
+    transform: rotate(-68deg) rotateY(180deg);
+  }
+}
+
+.screenGame {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+  pointer-events: none;
+}
+.screenGameText {
+  margin: 0;
+  opacity: 0.2;
+  font-size: 0.5em;
+  font-weight: 400;
+}
+.screenGameText2 {
+  text-align: right;
+}
+.statusText {
+  font-weight: 400;
+  pointer-events: none;
+  margin: 0;
+  margin-bottom: 1em;
+}
+.choices {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2em;
+}
+.choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  opacity: 0.6;
+  text-align: center;
+}
+.choice:hover {
+  opacity: 1;
+}
+.choice:focus {
+  opacity: 1;
+}
+.choice:hover .hand {
+  transform: translateY(-4px);
+}
+.choiceText {
+  font-size: 0.5em;
+  font-weight: 400;
+  margin: 0;
+  pointer-events: none;
+}
+.choose {
+  font-weight: 500;
+  margin: 0;
+  margin-top: 1em;
+  font-size: 0.8em;
+}
+.chooseLoading {
+  opacity: 0;
+}

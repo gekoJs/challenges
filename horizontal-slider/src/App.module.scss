@@ -1,0 +1,71 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  background: #1f1f1f;
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+}
+.carouselWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.carousel {
+  width: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.imgWrapper {
+  display: flex;
+  position: relative;
+}
+.img {
+  min-width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+}
+.btns {
+  width: 50px;
+  height: 50px;
+  border-radius: 1000em;
+  color: #1f1f1f;
+  background-color: antiquewhite;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    pointer-events: none;
+  }
+}
+.footerBtnsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.footerBtns {
+  background: #fff;
+  width: 12px;
+  height: 12px;
+  opacity: 0.8;
+  border-radius: 1000em;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.footerBtnsActive {
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+}
